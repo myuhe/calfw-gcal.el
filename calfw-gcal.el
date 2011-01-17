@@ -65,7 +65,6 @@
   (interactive)
   (let ((date (concat cfw:gcal-month "/" cfw:gcal-day))
         (status (cfw:gcal-edit-extract-status)))
-    (message "hoge%shoge" (cfw:gcal-format-status status))
     (start-process "cfw-gcal-send" nil "google" "calendar" "add" (cfw:gcal-format-status status))
     (cfw:gcal-quit)))
 
