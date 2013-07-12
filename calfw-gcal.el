@@ -195,7 +195,7 @@
   (interactive)
   (let ((date (concat cfw:gcal-year "-" cfw:gcal-month "-" cfw:gcal-day))
         (status (cfw:gcal-edit-extract-status)))
-    (start-process "cfw:gcal-send" nil "google" "calendar" "delete" status "--date" date )
+    (start-process "cfw:gcal-send" nil "google" "calendar" "delete" status "--date" date "--yes")
     (cfw:gcal-quit)))
 
 (defun cfw:gcal-gdata-add  (&optional multiple where desc)
